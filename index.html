@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Southern Aerospace Laboratories</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="smooth-scroll.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="animations.css">
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Almarai:wght@300&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+        rel="stylesheet">
+</head>
+
+<body onload='loadingScreenAnimation();'>
+    <div class="loading-screen">
+        <h2>We're building for the <mark>spaceflight</mark> of <mark>tomorrow</mark></h2>
+    </div>
+    <div class="navbar">
+        <a href="" class="logo">
+            <img src="sal-logo.svg" alt="SAL">
+        </a>
+        <a onclick="toggleMenu();" class="menu-btn">
+            Menu
+        </a>
+        <div class="navigation-menu">
+            <div class="options">
+                <ul>
+                    <li style="--categories-number: 0;"><a onclick="">Home</a></li>
+                    <li style="--categories-number: 1;"><a onclick="toggleOptions('about-options')">About</a></li>
+                    <li style="--categories-number: 2;"><a onclick="toggleOptions('services-options')">Services</a></li>
+                    <li style="--categories-number: 3;"><a onclick="">Contact</a></li>
+                </ul>
+            </div>
+            <div class="suboptions">
+                <div class="about-options">
+                    <div class="sub-option">
+                        <img src="placeholder.jpg" alt="">
+                        <div class="details">
+                            <h3 class="suboption-title">Vision and Mission</h3>
+                            <a class="suboption-btn">View</a>
+                        </div>
+                    </div>
+                    <div class="sub-option" style="transition-delay: 0.1s;">
+                        <img src="placeholder.jpg" alt="">
+                        <div class="details">
+                            <h3 class="suboption-title">Meet the Team</h3>
+                            <a class="suboption-btn">View</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="services-options">
+                    <div class="sub-option">
+                        <img src="placeholder.jpg" alt="">
+                        <div class="details">
+                            <h3 class="suboption-title">S.T.Model</h3>
+                            <a class="suboption-btn">View</a>
+                        </div>
+                    </div>
+                    <div class="sub-option" style="transition-delay: 0.1s;">
+                        <img src="placeholder.jpg" alt="">
+                        <div class="details">
+                            <h3 class="suboption-title">Sat.View</h3>
+                            <a href="swinroverteam.com" class="suboption-btn">View</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-options"></div>
+            </div>
+        </div>
+    </div>
+    <div class="scroll-container">
+        <div class="hero">
+            <div id="earth-canvas"></div>
+            <div class="line-h1">
+                <h1 style="--h1-delay: 0;">Southern</h1>
+            </div>
+            <div class="line-h1">
+                <h1 style="--h1-delay: 1;">Aerospace</h1>
+            </div>
+            <div class="line-h1">
+                <h1 style="--h1-delay: 2;">Labs</h1>
+                <div class="hero-images">
+                    <img src="whoosh.svg" alt="">
+                    <img src="arrow.svg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="about">
+            <div class="heading-container">
+                <div class="line-h2">
+                    <h2>Mission</h2>
+                </div>
+            </div>
+            <div class="image-container">
+                <div class="about-image">
+                    <img src="symbol-black.svg" alt="Arrow">
+                </div>
+            </div>
+            <p>We believe humanity is on the horizon of a new space revolution, and we want the Southern Hemisphere to
+                play a key role in this future. We're building software and hardware for the spaceflight of tomorrow.
+            </p>
+        </div>
+        <div class="services">
+            <div class="line-h1">
+                <h1>Our</h1>
+            </div>
+            <div class="line-h1">
+                <h1>Services</h1>
+            </div>
+            <div class="first-service service" style="margin-top:20vh; margin-bottom:10vh;">
+                <div class="info">
+                    <div class="line-h2">
+                        <h2>S.T.Model</h2>
+                    </div>
+                    <p>Space situational awareness system to provide accurate telemetry data of existing satellites </p>
+                    <a href="" class="service-btn">View Tool</a>
+                </div>
+            </div>
+            <div class="service dark-service">
+                <div class="info">
+                    <div class="line-h2">
+                        <h2>Sat.View</h2>
+                    </div>
+                    <p>Satellite Imagery Software with access to Sentinel, Landsat and USGS Data</p>
+                    <a href="" class="service-btn">View Tool</a>
+                </div>
+                <img src="placeholder.jpg" alt="">
+            </div>
+        </div>
+            <div class="footer">
+                <div class="logo">
+                    <div class="line-h1">
+                        <h1>Southern</h1>
+                    </div>
+                    <div class="line-h1">
+                        <h1>Aerospace</h1>
+                    </div>
+                    <div class="line-h1">
+                        <h1>Labs</h1>
+                        <div class="hero-images">
+                            <img src="whoosh.svg" alt="">
+                            <img src="arrow.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-info">
+                    <p>Copyright &copy; 2026. All Rights Reserved. Southern Aerospace Laboratories. Designed and Developed by
+                        Rudra Sekhri.</p>
+                    <p>We acknowledge the traditional owners of the land on which our operations are based, the Wurundjeri
+                        people of the Kulin Nation. We pay respects to their elders past, present and emerging.</p>
+                    <div class="footer-links">
+                        <ul>
+                            <li><a href="">Home</a></li>
+                            <li><a href="">About</a></li>
+                            <li><a href="">Team</a></li>
+                            <li><a href="">Services</a></li>
+                        </ul>
+                    </div>
+                    <a href="" class="email">hello@sal.com.au</a>
+                </div>
+            </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+    <script src="smooth-scroll.js"></script>
+    <script src="navbar.js"></script>
+    <script src="earth-scene.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="transitions.js"></script>
+    <script src="loading_screen.js"></script>
+</body>
+
+</html>

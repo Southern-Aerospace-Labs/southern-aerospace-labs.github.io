@@ -1,0 +1,100 @@
+.loading-screen {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100vw;
+    height:100vh;
+    padding:3vh 3vw;
+    box-sizing: border-box;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background:var(--white-color);
+    z-index:10;
+    transform-origin: top;
+    transition: transform 1s ease;
+}
+
+.loading-screen mark {
+    background:none;
+    color:var(--red-color);
+}
+
+.hero .line-h1 h1 {
+    transform: translateY(var(--massive-font-size));
+    animation: slide-up 1s forwards;
+    animation-delay: calc(0.2s * var(--h1-delay) + 2.5s);
+}
+
+.hero .line-h1 img {
+    transform: translateX(-500%);
+    animation: slide-right 1.5s forwards cubic-bezier(0,.62,.42,1);
+    animation-delay: 3s;
+}
+
+.about h2 {
+    transform:translateY(var(--heading-font-size));
+    transition: transform 1s ease;
+}
+
+.about img {
+    transform:translateX(-100%);
+    transition: transform 1s ease;
+}
+
+.about .line, .service .line, .loading-screen .line {
+    overflow: hidden;
+}
+
+.about .word, .service .word {
+    transform:translateY(var(--text-font-size));
+    transition:transform 0.5s ease;
+}
+
+.services h1 {
+    transform: translateY(var(--massive-font-size));
+    transition: transform 1s ease;
+}
+
+.service h2 {
+    transform:translateY(var(--heading-font-size));
+    transition: transform 1s ease;
+}
+
+.loading-screen .word {
+    transform:translateY(var(--heading-font-size));
+    transition:transform 0.5s ease, opacity 0.3s ease-in-out;
+}
+
+.service a {
+    opacity:0;
+    transform:translateY(3vh);
+    transition: transform 0.5s ease, opacity 0.3s ease-in-out, background 0.2s ease, border-color 0.2s ease-in, color 0.2s ease-in-out;
+}
+
+.dark-service img {
+    opacity:0;
+    transform:translateY(3vh);
+    transition: transform 0.5s ease, opacity 0.3s ease-in-out;
+}
+
+@keyframes slide-up {
+    from {
+        transform: translateY(var(--massive-font-size));
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-right {
+    from {
+        transform: translateX(-1000%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}

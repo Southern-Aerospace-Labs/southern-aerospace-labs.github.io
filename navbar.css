@@ -1,0 +1,176 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* background:var(--white-color); */
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    padding: 0 3vw;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: space-between;
+    transition: background 0.3s ease;
+    z-index: 5;
+}
+
+.navbar.scrolled {
+    background: var(--white-color);
+    transition: background 0.3s ease;
+}
+
+.navbar-red {
+    background: var(--red-color) !important;
+    transition: background 0.3s ease;
+}
+
+.navbar-red img {
+    mix-blend-mode: exclusion;
+}
+
+.navbar>a img {
+    height: 6vh;
+    width: initial;
+}
+
+.navigation-menu {
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    width: 100vw;
+    height: 60vh;
+    box-sizing: border-box;
+    background: var(--red-color);
+    pointer-events: none;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s ease;
+    transition-delay: 0.4s;
+}
+
+.navigation-menu.active {
+    pointer-events: all;
+    transform: scaleY(1);
+    transform-origin: top;
+    transition: transform 0.5s ease;
+}
+
+.navigation-menu>* {
+    padding: 0 3vw;
+}
+
+.navigation-menu .options {
+    padding: 5vh 3vw;
+    border-top: 2px solid var(--transparent-black);
+    border-bottom: 2px solid var(--transparent-black);
+    border-top-color: var(--red-color);
+    border-bottom-color: var(--red-color);
+}
+
+.navigation-menu .options ul li {
+    transform: translateY(3vh);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, transform 0.7s ease;
+    transition-delay: calc(0.1s * var(--categories-number));
+}
+
+.active .options ul li {
+    transform: translateY(0vh);
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out, transform 0.7s ease;
+    transition-delay: calc(0.1s * var(--categories-number) + 0.3s);
+}
+
+.navigation-menu .options ul {
+    list-style: none;
+    display: flex;
+    gap: 10vw;
+}
+
+.navbar .menu-btn {
+    font-size: var(--button-font-size-small);
+    color: var(--black-color);
+    border: 2px solid var(--light-grey);
+    display: inline-block;
+    padding: 2vh 3vw;
+    width: max-content;
+    border-radius: 8px;
+    transition: background 0.2s ease, color 0.2s ease-in, color 0.2s ease-in-out;
+}
+
+.navbar .menu-btn:hover {
+    background: var(--red-color);
+    border-color: var(--red-color);
+    color: var(--black-color);
+    transition: background 0.2s ease, color 0.2s ease-in, color 0.2s ease-in-out;
+}
+
+.navigation-menu .suboptions {
+    position: relative;
+    width: 100%;
+}
+
+.suboptions>div {
+    position: absolute;
+    top: 3vh;
+    left: 3vw;
+    display: flex;
+    gap: 3vw;
+}
+
+.suboptions-activated>.sub-option {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: all;
+    transition: opacity 0.3s ease-in-out, transform 0.7s ease;
+}
+
+.sub-option {
+    width: 25vw;
+    pointer-events: none;
+    opacity: 0;
+    transform: translateY(3vh);
+    transition: opacity 0.3s ease-in-out, transform 0.7s ease;
+}
+
+.sub-option .details {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sub-option a {
+    font-size: var(--button-font-size-small);
+    color: var(--black-color);
+    border: 2px solid var(--black-color);
+    display: inline-block;
+    padding: 1vh 2vw;
+    width: max-content;
+    border-radius: 8px;
+    transition: background 0.2s ease, color 0.2s ease-in, color 0.2s ease-in-out;
+}
+
+.sub-option a:hover {
+    background: var(--black-color);
+    color: var(--red-color);
+    transition: background 0.2s ease, color 0.2s ease-in-out;
+}
+
+.sub-option img {
+    width: 100%;
+    height: 30vh;
+    margin-bottom: 1.5vh;
+    border-radius: 10px;
+}
+
+.navbar-red a {
+    border-color: var(--black-color) !important;
+    transition: border-color 0.3s ease;
+}
+
+.navbar-red .menu-btn:hover {
+    background: var(--black-color);
+    color: var(--red-color);
+    transition: background 0.2s ease, color 0.2s ease-in-out;
+}
