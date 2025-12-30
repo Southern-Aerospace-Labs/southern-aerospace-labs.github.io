@@ -1,28 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Southern Aerospace Laboratories</title>
+    <title>SAL | About</title>
     <link rel="stylesheet" href="global-styles.css">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="about.css">
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="smooth-scroll.css">
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="global_animations.css">
-    <link rel="stylesheet" href="index_animations.css">
+    <link rel="stylesheet" href="about_animations.css">
     <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Almarai:wght@300&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
         rel="stylesheet">
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
 </head>
-
 <body onload='loadingScreenAnimation();'>
     <div class="loading-screen">
-        <h2>We're building for the <mark>spaceflight</mark> of <mark>tomorrow</mark></h2>
+        <h2>Built by people who value <mark>precision</mark>, <mark>design</mark>, and <mark>space.</mark></h2>
+    </div>
+    <div class="principle-images">
+        <div class="container">
+            <div class="slideshow-container">
+                <div class="principle-image first"></div>
+                <div class="principle-image second"></div>
+                <div class="principle-image third"></div>
+            </div>
+        </div>
     </div>
     <div class="navbar">
         <a onclick="goToUrl('index.html')" class="logo">
@@ -34,7 +49,7 @@
         <div class="navigation-menu">
             <div class="options">
                 <ul>
-                    <li style="--categories-number: 0;"><a onclick="">Home</a></li>
+                    <li style="--categories-number: 0;"><a onclick="goToUrl('index.html')">Home</a></li>
                     <li style="--categories-number: 1;"><a onclick="toggleOptions('about-options')">About</a></li>
                     <li style="--categories-number: 2;"><a onclick="toggleOptions('services-options')">Services</a></li>
                     <li style="--categories-number: 3;"><a onclick="">Contact</a></li>
@@ -46,7 +61,7 @@
                         <img src="placeholder.jpg" alt="">
                         <div class="details">
                             <h3 class="suboption-title">Vision and Mission</h3>
-                            <a onclick="goToUrl('about.html')" class="suboption-btn">View</a>
+                            <a class="suboption-btn">View</a>
                         </div>
                     </div>
                     <div class="sub-option" style="transition-delay: 0.1s;">
@@ -79,15 +94,11 @@
     </div>
     <div class="scroll-container">
         <div class="hero">
-            <div id="earth-canvas"></div>
             <div class="line-h1">
-                <h1 style="--h1-delay: 0;">Southern</h1>
+                <h1 style="--h1-delay: 0;">Vision and</h1>
             </div>
             <div class="line-h1">
-                <h1 style="--h1-delay: 1;">Aerospace</h1>
-            </div>
-            <div class="line-h1">
-                <h1 style="--h1-delay: 2;">Labs</h1>
+                <h1 style="--h1-delay: 2;">Mission</h1>
                 <div class="hero-images">
                     <img src="whoosh.svg" alt="">
                     <img src="arrow.svg" alt="">
@@ -95,45 +106,63 @@
             </div>
         </div>
         <div class="about">
-            <div class="heading-container">
-                <div class="line-h2">
-                    <h2>Mission</h2>
+            <div class="summary">
+                <div class="title">
+                    <div class="line-h3">
+                        <h3>About</h3>
+                    </div>
+                </div>
+                <div class="text">
+                    <p>Based in Melbourne, Australia, Southern Aerospace Labs (SAL) was founded to drive research and development into the space industry in the Southern Hemisphere. </p>
+                </div>
+            </div>
+            <div class="more-info">
+                <div class="column first">
+                    <p>The Australian Space Agency was first established in the last five years, and there has been a broad acceleration of the efforts in the Southern Hemisphere to contribute to space missions.</p>
+                </div>
+                <div class="column">
+                    <p>As the world prepares for a new space revolution with the formation of permanent human bases beyond Earth, such as the Moon and Mars, it is important that the Southern Hemisphere is at the forefront.</p>
                 </div>
             </div>
             <div class="image-container">
-                <div class="about-image">
-                    <img src="symbol-black.svg" alt="Arrow">
-                </div>
+                <div class="image"></div>
             </div>
-            <p>We believe humanity is on the horizon of a new space revolution, and we want the Southern Hemisphere to
-                play a key role in this future. We're building software and hardware for the spaceflight of tomorrow.
-            </p>
         </div>
-        <div class="services">
-            <div class="line-h1">
-                <h1>Our</h1>
-            </div>
-            <div class="line-h1">
-                <h1>Services</h1>
-            </div>
-            <div class="first-service service" style="margin-top:20vh; margin-bottom:10vh;">
-                <div class="info">
-                    <div class="line-h2">
-                        <h2>S.T.Model</h2>
-                    </div>
-                    <p>Space situational awareness system to provide accurate telemetry data of existing satellites </p>
-                    <a href="" class="service-btn">View Tool</a>
+        <div class="principles">
+            <div class="title">
+                <div class="line-h2">
+                    <h2>Our Principles</h2>
                 </div>
             </div>
-            <div class="service dark-service">
-                <div class="info">
-                    <div class="line-h2">
-                        <h2>Sat.View</h2>
+            <div class="principle vision">
+                <div class="title">
+                    <div class="line-h3">
+                        <h3>Vision</h3>
                     </div>
-                    <p>Satellite Imagery Software with access to Sentinel, Landsat and USGS Data</p>
-                    <a href="" class="service-btn">View Tool</a>
                 </div>
-                <img src="placeholder.jpg" alt="">
+                <div class="text">
+                    <p>We envision a Solar System where all humans can participate in and benefit from space. We believe this future depends on space systems that are intuitive, accessible, and designed around human needs — not just for specialists, but for anyone building, operating, or relying on space technology. From the southern hemisphere, we are building the foundations for a more open, inclusive, and sustainable space economy.</p>
+                </div>
+            </div>
+            <div class="principle values">
+                <div class="title">
+                    <div class="line-h3">
+                        <h3>Values</h3>
+                    </div>
+                </div>
+                <div class="text">
+                    <p>We strive for an environment that is led by processes that encourage rapid iteration, refinement, experimentation and lots of failures. By creating a system in which individuals can prototype safely and craft new software and hardware with passion and care, we want to continue to strive towards our vision. Paired with thoughtful, human-centered design, we want to continue to ensure that the space ecosystem is accessible for all.</p>
+                </div>
+            </div>
+            <div class="principle mission">
+                <div class="title">
+                    <div class="line-h3">
+                        <h3>Mission</h3>
+                    </div>
+                </div>
+                <div class="text">
+                    <p>Our mission is to design and build intuitive, reliable software and hardware that enable humans to explore and operate in space. By lowering barriers to participation in space technology, we aim to support a more inclusive, open, and sustainable space economy. We want to unlock new opportunities in the space economy. To achieve this, we want to make Australia the central hub for space-related activities in the Southern Hemisphere.</p>
+                </div>
             </div>
         </div>
         <div class="footer">
@@ -171,13 +200,14 @@
     </div>
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+    <script src="https://cdn.skypack.dev/three@0.136.0/examples/jsm/loaders/GLTFLoader.js"></script>
     <script src="smooth-scroll.js"></script>
     <script src="navbar.js"></script>
-    <script src="earth-scene.js"></script>
     <script src="https://unpkg.com/split-type"></script>
     <script src="global-transitions.js"></script>
-    <script src="index-transitions.js"></script>
     <script src="loading_screen.js"></script>
+    <script src="slideshow.js"></script>
+    <script type="module" src="satellite_canvas.js"></script>
+    <script src="about-transitions.js"></script>
 </body>
-
 </html>

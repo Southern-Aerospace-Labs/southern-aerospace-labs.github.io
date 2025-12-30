@@ -95,7 +95,7 @@
     padding: 2vh 3vw;
     width: max-content;
     border-radius: 8px;
-    transition: background 0.2s ease, color 0.2s ease-in, color 0.2s ease-in-out;
+    transition: background 0.2s ease, color 0.2s ease-in-out;
 }
 
 .navbar .menu-btn:hover {
@@ -116,6 +116,7 @@
     left: 3vw;
     display: flex;
     gap: 3vw;
+    pointer-events: none;
 }
 
 .suboptions-activated>.sub-option {
@@ -148,7 +149,7 @@
     padding: 1vh 2vw;
     width: max-content;
     border-radius: 8px;
-    transition: background 0.2s ease, color 0.2s ease-in, color 0.2s ease-in-out;
+    transition: background 0.2s ease, color 0.2s ease-in-out;
 }
 
 .sub-option a:hover {
@@ -164,9 +165,9 @@
     border-radius: 10px;
 }
 
-.navbar-red a {
+.navbar-red .menu-btn {
     border-color: var(--black-color) !important;
-    transition: border-color 0.3s ease;
+    transition: border-color 0.3s ease, background 0.2s ease, color 0.2s ease-in-out;
 }
 
 .navbar-red .menu-btn:hover {

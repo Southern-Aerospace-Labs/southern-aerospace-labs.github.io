@@ -32,3 +32,10 @@ window.addEventListener('scroll', () => {
         document.querySelector('.navbar').classList.remove('scrolled');
     }
 })
+
+function goToUrl(destination) {
+    document.querySelector('.loading-screen').style.transform = 'scaleY(1)';
+    setTimeout(() => {
+        window.location.href = destination;
+    }, 1000)
+}

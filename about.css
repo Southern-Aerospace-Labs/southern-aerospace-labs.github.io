@@ -1,0 +1,175 @@
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  outline: none;
+  z-index: -1; /* Keeps it behind your text/content */
+}
+
+.about {
+    width:100vw;
+    padding: 10vh 0;
+    padding-bottom:2vh;
+    background:var(--white-color);
+    box-sizing: border-box;
+    z-index:2;
+    position: relative;
+}
+
+.about > div {
+    padding-left: 3vw;
+    padding-right: 3vw;
+}
+
+h3 {
+    font-size: var(--text-font-size);
+    text-transform: uppercase;
+    color: var(--red-color);
+    line-height:1;
+}
+
+.summary p {
+    font-size: var(--heading-font-size);
+    width:60vw;
+    letter-spacing: -1px;
+}
+
+.summary {
+    display: flex;
+    gap:10vw;
+    width:100vw;
+}
+
+.more-info {
+    padding-top: 5vh;
+    border-top: 2px solid var(--light-grey);
+    background:var(--white-color);
+    display:flex;
+    gap:5vw;
+    margin-top:10vh;
+}
+
+.more-info .first {
+    margin-left:18.5vw;
+}
+
+.more-info p {
+    width:35vw;
+}
+
+.image-container {
+    width:100vw;
+    height:120vh;
+    box-sizing: border-box;
+    padding: 10vh 1vw !important;
+    padding-bottom: 0 !important;
+}
+
+.image {
+    background: url(about-image.jpg);
+    background-size: 150%;
+    background-repeat: no-repeat;
+    background-position: 60% 50%;
+    width: 100%;
+    height: 100%;
+    border-radius:15px;
+}
+
+.principles {
+    padding: 10vh 3vw;
+    width:60%;
+    display: flex;
+    flex-direction: column;
+    gap:5vh;
+}
+
+.principle {
+    padding:3vh 0;
+    border-top: 2px solid var(--transparent-black);
+    display:flex;
+    gap:5vw;
+    width:100%;
+}
+
+.principle p {
+    font-size:var(--button-font-size);
+}
+
+.principle h3 {
+    width:15vw;
+}
+
+.principles h2 {
+    color: var(--red-color);
+}
+
+.principles .title {
+    margin-bottom:3vh;
+}
+
+.principle-images {
+    position:fixed;
+    bottom:3vh;
+    right:3vw;
+    transition: transform 0.5s ease, opacity 0.3s ease-in-out;
+    z-index: 1;
+    opacity: 0;
+    transform: translateY(3vh);
+}
+
+.principle-images .container {
+    width:30vw;
+    height:30vh;
+    background:var(--transparent-black);
+    border-radius:10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.principle-images .principle-image {
+    width:100%;
+    height:100%;
+    transition: transform 1s cubic-bezier(.2, .69, .39, 1), background-position 1s cubic-bezier(.2, .69, .39, 1);
+}
+
+.principle-images .first {
+    background: url('vision.jpg');
+    background-size:120%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+.principle-images .second {
+    background: url('values.jpg');
+    background-size:120%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+.principle-images .third {
+    background: url('mission.jpg');
+    background-size:120%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+.principle-images .slideshow-container {
+    width: 100%;
+    height: 300%;
+    display: flex;
+    flex-direction: column;
+}
+
+body .footer {
+    background:var(--white-color);
+    color: var(--black-color);
+    border-top-color: var(--light-grey);
+}
+
+body .footer a {
+    color: black;
+}
+
+body .footer p {
+    color: #aaa;
+}

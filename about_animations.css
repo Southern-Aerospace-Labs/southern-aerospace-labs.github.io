@@ -1,0 +1,52 @@
+.about h3 {
+    transform:translateY(var(--heading-font-size));
+    transition: transform 0.5s ease;
+}
+
+.about .line, .principles .line {
+    overflow: hidden;
+    width:100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.summary .word {
+    transform:translateY(var(--heading-font-size));
+    transition:transform 0.5s ease;
+}
+
+.more-info .word {
+    transform:translateY(var(--text-font-size));
+    transition:transform 0.5s ease;
+}
+
+.more-info {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.principles h2 {
+    transform:translateY(var(--heading-font-size));
+    transition: transform 1s ease;
+}
+
+.principle {
+    transform: translateY(3vh);
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.3s ease-in-out;
+}
+
+.principle .line-h3 {
+    overflow:hidden;
+    height: var(--text-font-size);
+}
+
+.principle h3 {
+    transform: translateY(var(--text-font-size));
+    transition:transform 0.5s ease;
+}
+
+.principles .word {
+    transform: translateY(var(--button-font-size));
+    transition:transform 0.5s ease;
+}
